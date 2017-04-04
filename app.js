@@ -29,7 +29,7 @@ var home = prompt('Do I live in Seattle?');
   console.log('live in Seattle?', home);
 
   if(home.toLowerCase() == 'no') {
-  }
+
   else{
     alert('Sorry, I actually live across the Puget Sound');
   }
@@ -37,7 +37,7 @@ var home = prompt('Do I live in Seattle?');
 var wine = prompt('Am I a fan of wine?');
   console.log('wine', wine);
 
-    alert('YES!  I love wine! mmmm')
+    alert('YES!  I love wine! mmmm');
   }
 
   else {
