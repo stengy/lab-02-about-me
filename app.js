@@ -10,6 +10,7 @@ var veteran = prompt('Did I serve in the Armed Forces?');
  if( veteran.toLowerCase() == 'yes') {
   alert('Nice!');
  }
+
  else {
   alert('Ooops!  Maybe you\'ll get the next one');
  }
@@ -29,8 +30,7 @@ var home = prompt('Do I live in Seattle?');
   console.log('live in Seattle?', home);
 
   if(home.toLowerCase() == 'no') {
-
-  else{
+} else{
     alert('Sorry, I actually live across the Puget Sound');
   }
 
