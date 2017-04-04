@@ -15,7 +15,7 @@ var veteran = prompt('Did I serve in the Armed Forces?');
  }
 
 var food = prompt('Would you believe my favorite fruit is watermelon?');
-  console.log('favorite fruit', food);
+  console.log('love watermelon', food);
 
   if(food.toLowerCase() == 'yes') {
     alert('omg I LOVE watermelon');
@@ -26,13 +26,31 @@ var food = prompt('Would you believe my favorite fruit is watermelon?');
   }
 
 var home = prompt('Do I live in Seattle?');
-  console.log('where do I live?', home);
+  console.log('live in Seattle?', home);
 
   if(home.toLowerCase() == 'no') {
-    alert('BINGO!');
   }
   else{
     alert('Sorry, I actually live across the Puget Sound');
   }
 
-var 
+var wine = prompt('Am I a fan of wine?');
+  console.log('wine', wine);
+
+    alert('YES!  I love wine! mmmm')
+  }
+
+  else {
+    alert('Actually I am a wine-o, haha');
+  }
+
+var age = prompt('Am I in my 30\'s?');
+  console.log('30s', age);
+
+  if(age.toLowerCase() == 'yes') {
+    alert('yeahhh I am becoming old');
+  }
+
+  else {
+    alert('awww thank you, unfortunely I am getting old');
+  }
