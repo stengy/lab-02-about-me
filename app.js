@@ -68,7 +68,19 @@ for (var attempts = 4; attempts > 0 && answer; attempts--) {
     answer = false
   } else if (attempts === 1){
     alert('Sorry you are out of chances');
+  } else if(guess < 3){
+    alert('Not quite, too low');
   } else {
-    alert('Not quite, try again');
+    alert('Whoa! I am not made of money, try a lower number');
   }
 }
+
+
+// country = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
+//
+// for(attempts = 6; attempts > 0 && answer; attempts--) {
+//   guess = prompt('Can you name another country I have been to?')
+//   guess = toLowerCase(guess)
+//
+//   if
+// }
