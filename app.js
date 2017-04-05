@@ -66,7 +66,7 @@ for (var attempts = 4; attempts > 0 && answer; attempts--) {
   if(guess === myVehicle) {
     alert('Correct!');
     answer = false
-  } else if (attempts = 1){
+  } else if (attempts === 1){
     alert('Sorry you are out of chances');
   } else {
     alert('Not quite, try again');
