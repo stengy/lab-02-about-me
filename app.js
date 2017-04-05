@@ -55,32 +55,40 @@
 //   }
 
 
-var myVehicle = 3;
-var answer = true;
-var guess;
-
-for (var attempts = 4; attempts > 0 && answer; attempts--) {
-  guess = prompt('How many vehicles do you think I own including motorcyles?');
-  guess = parseInt(guess);
-
-  if(guess === myVehicle) {
-    alert('Correct!');
-    answer = false
-  } else if (attempts === 1){
-    alert('Sorry you are out of chances');
-  } else if(guess < 3){
-    alert('Not quite, too low');
-  } else {
-    alert('Whoa! I am not made of money, try a lower number');
-  }
-}
-
-
-// country = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
+// var myVehicle = 3;
+ var answer = true;
+// var guess;
 //
-// for(attempts = 6; attempts > 0 && answer; attempts--) {
-//   guess = prompt('Can you name another country I have been to?')
-//   guess = toLowerCase(guess)
+// for (var attempts = 4; attempts > 0 && answer; attempts--) {
+//   guess = prompt('How many vehicles do you think I own including motorcyles?');
+//   guess = parseInt(guess);
 //
-//   if
+//   if(guess === myVehicle) {
+//     alert('Correct!');
+//     answer = false
+//   } else if (attempts === 1){
+//     alert('Sorry you are out of chances');
+//   } else if(guess < 3){
+//     alert('Not quite, too low');
+//   } else {
+//     alert('Whoa! I am not made of money, try a lower number');
+//   }
 // }
+
+var guess;
+country = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
+
+for(var attempts = 6; attempts > 0 && answer; attempts--) {
+  guess = prompt('Can you name another country I have been to?');
+
+  if(guess.toLowerCase() === country) {
+    alert( 'On the money! ' + country);
+    answer = false;
+  } else if(attempts === 1) {
+    alert('unfortunely you are out of attempts.  Possible answers include: ' + country + ' . Better luck next time!');
+
+  } else {
+    alert('Try again, I believe in you!');
+  }
+
+}
