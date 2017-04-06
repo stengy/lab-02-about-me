@@ -85,7 +85,9 @@ console.log(guess)
   for(var i = 0; i < country.length; i++){
     if(guess === country[i]) {
       answer = false
-      alert('Correct');
+      alert('Yes!  That\'s one of the answers, I would have also accepted: ');
+    }else if(attempts === 1) {
+      alert('Unfortunely you are out of attempts.  Possible answers included: ' + country + '.  Better luck next time!');
     }
 
   }
