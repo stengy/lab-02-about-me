@@ -37,7 +37,7 @@
 // var wine = prompt('Am I a fan of wine?');
 // console.log('wine', wine);
 //
-//   if(wine.toLowerCase() == 'yes') {
+//  if(wine.toLowerCase() == 'yes') {
 //     alert('YES!  I love wine! mmmm');
 //
 //   }else {
@@ -56,9 +56,8 @@
 
 
 // var myVehicle = 3;
- var answer = true;
 // var guess;
-//
+//var answer = true
 // for (var attempts = 4; attempts > 0 && answer; attempts--) {
 //   guess = prompt('How many vehicles do you think I own including motorcyles?');
 //   guess = parseInt(guess);
@@ -75,20 +74,30 @@
 //   }
 // }
 
+var answer = true;
 var guess;
-country = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
+var country = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
 
 for(var attempts = 6; attempts > 0 && answer; attempts--) {
   guess = prompt('Can you name another country I have been to?');
+console.log(guess)
 
-  if(guess.toLowerCase() === country) {
-    alert( 'On the money! ' + country);
-    answer = false;
-  } else if(attempts === 1) {
-    alert('unfortunely you are out of attempts.  Possible answers include: ' + country + ' . Better luck next time!');
+  for(var i = 0; i < country.length; i++){
+    if(guess === country[i]) {
+      answer = false
+      alert('Correct');
+    }
 
-  } else {
-    alert('Try again, I believe in you!');
   }
-
 }
+//       if(guess === country[i]) {
+//         alert( 'On the money! ' + country);
+//         answer = false;
+//       } else if(attempts === 1) {
+//         alert('Unfortunely you are out of attempts.  Possible answers include: ' + country + ' . Better luck next time!');
+//
+//       } else {
+//         alert('Try again, I believe in you!');
+//       }
+//
+// }
