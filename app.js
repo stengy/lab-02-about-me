@@ -76,18 +76,27 @@
 
 var answer = true;
 var guess;
-var country = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
+var countries = ['Iraq',' Afghanistan', ' Pakistan', ' Korea', ' Kuwait', ' Kazakhstan', ' Canada', ' Mexico', ' Netherlands', ' Germany', ' Iceland', ' Japan', ' Ireland', ' Scotland'];
 
 for(var attempts = 6; attempts > 0 && answer; attempts--) {
   guess = prompt('Can you name another country I have been to?');
 console.log(guess)
 
-  for(var i = 0; i < country.length; i++){
-    if(guess === country[i]) {
-      answer = false
-      alert('Yes!  That\'s one of the answers, I would have also accepted: ');
+  for(var i = 0; i < countries.length; i++){
+
+    if(guess.toLowerCase(guess) === countries[i].trim().toLowerCase()) {
+      answer = false;
+      attempts = 0;
+      alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
+console.log(answer)
+
     }else if(attempts === 1) {
       alert('Unfortunely you are out of attempts.  Possible answers included: ' + country + '.  Better luck next time!');
+console.log(answer)
+
+    } else {
+      alert('Try again, I believe in you!');
+      console.log(answer);
     }
 
   }
