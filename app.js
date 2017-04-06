@@ -88,7 +88,7 @@ for(var attempts = 6; attempts > 0 && answer; attempts--) {
 console.log('inner for loop' + i);
               if(guess === countries[i]) {
                   answer = false;
-                  i = 2;
+                  i = 3;
                   alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
                   console.log('innerif ' + answer);
 
