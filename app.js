@@ -76,28 +76,27 @@
 
 var answer = true;
 var guess;
-var countries = ['Iraq',' Afghanistan', ' Pakistan', ' Korea', ' Kuwait', ' Kazakhstan', ' Canada', ' Mexico', ' Netherlands', ' Germany', ' Iceland', ' Japan', ' Ireland', ' Scotland'];
+var countries = ['test1','test2'];
+var i;
 
 for(var attempts = 6; attempts > 0 && answer; attempts--) {
-  guess = prompt('Can you name another country I have been to?');
-console.log(guess)
+        guess = prompt('Can you name another country I have been to?');
+        console.log('out of for loop' + attempts);
 
-  for(var i = 0; i < countries.length; i++){
 
-    if(guess.toLowerCase(guess) === countries[i].trim().toLowerCase()) {
-      answer = false;
-      attempts = 0;
-      alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
-console.log(answer)
+          for( i = 0; i < countries.length; i++){
+console.log('inner for loop' + i);
+              if(guess === countries[i]) {
+                  answer = false;
+                  i = 2;
+                  alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
+                  console.log('innerif ' + answer);
 
-    }else if(attempts === 1) {
-      alert('Unfortunely you are out of attempts.  Possible answers included: ' + country + '.  Better luck next time!');
-console.log(answer)
+            } else if(i === countries.length -1) {
+            alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
+            console.log('inner elseif' + i);
 
-    } else {
-      alert('Try again, I believe in you!');
-      console.log(answer);
-    }
+        }
 
   }
 }
