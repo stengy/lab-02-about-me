@@ -93,31 +93,33 @@ function questionSix(){
 }
 questionSix();
 
-//
-// var answer = true;
-// var guess;
-// var countries = ['Iraq','Afghanistan', 'Pakistan', 'Korea', 'Kuwait', 'Kazakhstan', 'Canada', 'Mexico', 'Netherlands', 'Germany', 'Iceland', 'Japan', 'Ireland', 'Scotland'];
-// var i;
-// var stopInnerLoop = true;
-//
-// for(var attempts = 6; attempts > 0 && answer; attempts--) {
-//         guess = prompt('Can you name another country I have been to?');
-//         console.log('out of for loop' + attempts);
-//
-//
-//           for( i = 0; i < countries.length && stopInnerLoop; i++){
-// console.log('inner for loop' + i);
-//               if(guess === countries[i]) {
-//                   answer = false;
-//                   alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
-//                   stopInnerLoop = false;
-//                   console.log('innerif ' + answer);
-//
-//             } else if(i === countries.length -1) {
-//             alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
-//             console.log('inner elseif' + i);
-//
-//         }
-//
-//   }
-// }
+//start function for seventh question
+function questionseven(){
+  var answer = true;
+  var guess;
+  var countries = ['iraq','afghanistan', 'pakistan', 'korea', 'kuwait', 'kazakhstan', 'canada', 'mexico', 'netherlands', 'germany', 'iceland', 'japan', 'ireland', 'scotland'];
+  var i;
+  var stopInnerLoop = true;
+
+    for(var attempts = 6; attempts > 0 && answer; attempts--) {
+        guess = prompt('Can you name another country I have been to?');
+        guess = guess.trim().toLowerCase();
+        console.log('out of for loop' + attempts);
+
+          for( i = 0; i < countries.length && stopInnerLoop; i++){
+            console.log('inner for loop' + i);
+              if(guess === countries[i]) {
+                  answer = false;
+                  alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
+                  stopInnerLoop = false;
+                  console.log('innerif ' + answer);
+
+              } else if(i === countries.length -1) {
+                alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
+                console.log('inner elseif' + i);
+              }
+
+          }
+    }
+}
+questionseven();
