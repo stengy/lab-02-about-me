@@ -78,7 +78,7 @@ var answer = true;
 var guess;
 var countries = ['test1','test2'];
 var i;
-var secondaryCon = true;
+var secondaryCon = true; 
 
 for(var attempts = 6; attempts > 0 && answer; attempts--) {
         guess = prompt('Can you name another country I have been to?');
