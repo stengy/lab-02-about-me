@@ -68,24 +68,31 @@ var age = prompt('Am I in my 30\'s?');
 console.log('30s', age);
 questionFive(age);
 
-// var myVehicle = 3;
-// var guess;
-// var answer = true
-// for (var attempts = 4; attempts > 0 && answer; attempts--) {
-//   guess = prompt('How many vehicles do you think I own including motorcyles?');
-//   guess = parseInt(guess);
-//
-//   if(guess === myVehicle) {
-//     alert('Correct!');
-//     answer = false
-//   } else if (attempts === 1){
-//     alert('Sorry you are out of chances');
-//   } else if(guess < 3){
-//     alert('Not quite, too low');
-//   } else {
-//     alert('Whoa! I am not made of money, try a lower number');
-//   }
-// }
+//start functoin for sixth question
+function questionSix(){
+  var myVehicle = 3;
+  var guess;
+  var answer = true
+
+  for (var attempts = 4; attempts > 0 && answer; attempts--) {
+    guess =  prompt('How many vehicles do you think I own including motorcyles?');
+    guess = parseInt(guess);
+
+    if(guess === myVehicle) {
+      return alert('Correct!');
+      console.log(answer1);
+      answer = false
+    } else if (attempts === 1){
+      alert('Sorry you are out of chances');
+    } else if(guess < 3){
+      alert('Not quite, too low');
+    } else {
+      alert('Whoa! I am not made of money, try a lower number');
+    }
+  }
+}
+questionSix();
+
 //
 // var answer = true;
 // var guess;
