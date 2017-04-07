@@ -1,14 +1,17 @@
 'use strict';
 console.log("Heyyyy");
+var userName = prompt('Hello there!  Whom do we have the pleasure of talking with today?');
 
-alert('Let\'s check your memory from introductions ^_^');
+alert('It\'s a pleasure to meet you ' + userName + ', We\'re going play a quick game and see what you can tell about me with some good ol intuition.');
 
+var scoreKeeper = 1;
 
 var veteran = prompt('Did I serve in the Armed Forces?');
 console.log('Veteran?', veteran);
 
  if( veteran.toLowerCase() == 'yes') {
-  alert('Nice!');
+  alert('See off to a good start already!  I was in the Army for 6 years.');
+  scoreKeeper++;
 
  } else {
   alert('Ooops!  Maybe you\'ll get the next one');
@@ -18,10 +21,11 @@ var food = prompt('Would you believe my favorite fruit is watermelon?');
 console.log('love watermelon', food);
 
   if(food.toLowerCase() == 'yes') {
-    alert('omg I LOVE watermelon');
+    alert('Of course right?!  How could anyone not love watermelon!  Look at you go with the 2 piece ^_^ .');
+    scoreKeeper++;
 
   } else {
-    alert('incorrect');
+    alert('Actually I am pretty crazy about watermelon!  I once ate two large watermelons in one sitting...it was not the best idea but it was delicious!');
   }
 
 var home = prompt('Do I live in Seattle?');
@@ -29,9 +33,10 @@ console.log('live in Seattle?', home);
 
   if(home.toLowerCase() == 'no') {
     alert('Correct!  Too expensive!');
+    scoreKeeper++;
 
 } else{
-    alert('Sorry, I actually live across the Puget Sound');
+    alert('Nah, I actually live across the Puget Sound');
   }
 
 var wine = prompt('Am I a fan of wine?');
@@ -78,7 +83,7 @@ var answer = true;
 var guess;
 var countries = ['test1','test2'];
 var i;
-var secondaryCon = true; 
+var secondaryCon = true;
 
 for(var attempts = 6; attempts > 0 && answer; attempts--) {
         guess = prompt('Can you name another country I have been to?');
