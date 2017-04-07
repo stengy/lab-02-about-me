@@ -45,28 +45,29 @@ questionThree(home);
 //start function for fourth question
 function questionFour(answer) {
    if(answer.trim().toLowerCase() === 'yes') {
-      alert('YES!  I love wine! mmmm');
+      return alert('YES!  I love wine! mmmm');
 
     } else {
-      alert('Actually I am a wine-o, haha');
+      return alert('Actually I am a wine-o, haha');
     }
 }
 var wine = prompt('Am I a fan of wine?');
 console.log('wine', wine);
 questionFour(wine);
 
-//
-// var age = prompt('Am I in my 30\'s?');
-// console.log('30s', age);
-//
-//   if(age.toLowerCase() == 'yes') {
-//     alert('yeahhh I am becoming old');
-//
-//   } else {
-//     alert('awww thank you, unfortunely I am getting old');
-//   }
-//
-//
+//start function for fifth question
+function questionFive(answer){
+    if(answer.trim().toLowerCase() === 'yes') {
+      return alert('yeahhh I am becoming old');
+
+    } else {
+      return alert('awww thank you, unfortunely I am getting old');
+    }
+}
+var age = prompt('Am I in my 30\'s?');
+console.log('30s', age);
+questionFive(age);
+
 // var myVehicle = 3;
 // var guess;
 // var answer = true
