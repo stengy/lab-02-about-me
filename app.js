@@ -29,16 +29,19 @@ var food = prompt('Would you believe my favorite fruit is watermelon?');
 console.log('love watermelon', food);
 questionTwo(food);
 
-// var home = prompt('Do I live in Seattle?');
-// console.log('live in Seattle?', home);
-//
-//   if(home.toLowerCase() == 'no') {
-//     alert('Correct!  Too expensive!');
-//
-// } else{
-//     alert('Sorry, I actually live across the Puget Sound');
-//   }
-//
+// start function for third question
+function questionThree(answer) {
+    if(answer.trim().toLowerCase() == 'no') {
+      return alert('Correct!  Too expensive!');
+
+    } else {
+    return alert('Sorry, I actually live across the Puget Sound');
+    }
+}
+var home = prompt('Do I live in Seattle?');
+console.log('live in Seattle?', home);
+questionThree(home);
+
 // var wine = prompt('Am I a fan of wine?');
 // console.log('wine', wine);
 //
