@@ -31,7 +31,7 @@ questionTwo(food);
 
 // start function for third question
 function questionThree(answer) {
-    if(answer.trim().toLowerCase() == 'no') {
+    if(answer.trim().toLowerCase() === 'no') {
       return alert('Correct!  Too expensive!');
 
     } else {
@@ -42,15 +42,19 @@ var home = prompt('Do I live in Seattle?');
 console.log('live in Seattle?', home);
 questionThree(home);
 
-// var wine = prompt('Am I a fan of wine?');
-// console.log('wine', wine);
-//
-//  if(wine.toLowerCase() == 'yes') {
-//     alert('YES!  I love wine! mmmm');
-//
-//   }else {
-//     alert('Actually I am a wine-o, haha');
-//   }
+//start function for fourth question
+function questionFour(answer) {
+   if(answer.trim().toLowerCase() === 'yes') {
+      alert('YES!  I love wine! mmmm');
+
+    } else {
+      alert('Actually I am a wine-o, haha');
+    }
+}
+var wine = prompt('Am I a fan of wine?');
+console.log('wine', wine);
+questionFour(wine);
+
 //
 // var age = prompt('Am I in my 30\'s?');
 // console.log('30s', age);
