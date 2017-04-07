@@ -4,8 +4,8 @@ console.log("Heyyyy");
 alert('Let\'s check your memory from introductions ^_^');
 
 //Start Function for first Question
-function QuestionOne(answer) {
-  if (answer.trim().toLowerCase() == 'yes') {
+function questionOne(answer) {
+  if (answer.trim().toLowerCase() === 'yes') {
    return alert('Nice');
   } else {
    return alert('Ooops!  Maybe you\'ll get the next one');
@@ -13,17 +13,21 @@ function QuestionOne(answer) {
 }
 
 var veteran = prompt('Did I serve in the Armed Forces?');
-QuestionOne(veteran);
+questionOne(veteran);
 
-// var food = prompt('Would you believe my favorite fruit is watermelon?');
-// console.log('love watermelon', food);
-//
-//   if(food.toLowerCase() == 'yes') {
-//     alert('omg I LOVE watermelon');
-//
-//   } else {
-//     alert('incorrect');
-//   }
+//Start function for second QuestionOne
+function questionTwo(answer) {
+    if(answer.trim().toLowerCase() === 'yes') {
+      return alert('omg I LOVE watermelon');
+
+    } else {
+      return alert('incorrect');
+    }
+
+}
+var food = prompt('Would you believe my favorite fruit is watermelon?');
+console.log('love watermelon', food);
+questionTwo(food);
 
 // var home = prompt('Do I live in Seattle?');
 // console.log('live in Seattle?', home);
