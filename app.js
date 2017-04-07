@@ -110,12 +110,12 @@ function questionseven(){
             console.log('inner for loop' + i);
               if(guess === countries[i]) {
                   answer = false;
-                  alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
+                  return alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
                   stopInnerLoop = false;
                   console.log('innerif ' + answer);
 
               } else if(i === countries.length -1) {
-                alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
+                return alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
                 console.log('inner elseif' + i);
               }
 
