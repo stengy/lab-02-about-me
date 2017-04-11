@@ -4,7 +4,7 @@ var userName = prompt('Hello there!  Whom do we have the pleasure of talking wit
 
 alert('It\'s a pleasure to meet you ' + userName + ', We\'re going play a quick game and see what you can tell about me with some good ol intuition.');
 
-var scoreKeeper = 1;
+var scoreKeeper = 0;
 
 var veteran = prompt('Did I serve in the Armed Forces?');
 console.log('Veteran?', veteran);
@@ -106,3 +106,5 @@ console.log('inner for loop' + i);
 
   }
 }
+
+alert('Well this concludes our little game!  I do hope you enjoyed yourself.  You answered ' + scoreKeeper + ' out of 7 correctly!')
