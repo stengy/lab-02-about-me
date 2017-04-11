@@ -9,55 +9,57 @@ var scoreKeeper = 0;
 var veteran = prompt('Did I serve in the Armed Forces?');
 console.log('Veteran?', veteran);
 
- if( veteran.toLowerCase() == 'yes') {
+if( veteran.toLowerCase() == 'yes') {
   alert('See off to a good start already!  I was in the Army for 6 years.');
   scoreKeeper++;
 
- } else {
+} else {
   alert('Ooops!  Maybe you\'ll get the next one');
- }
+}
 
 var food = prompt('Would you believe my favorite fruit is watermelon?');
 console.log('love watermelon', food);
 
-  if(food.toLowerCase() == 'yes') {
-    alert('Of course right?!  How could anyone not love watermelon!  Look at you go with the 2 piece ^_^ .');
-    scoreKeeper++;
+if(food.toLowerCase() == 'yes') {
+  alert('Of course right?!  How could anyone not love watermelon!  Look at you go with the 2 piece ^_^ .');
+  scoreKeeper++;
 
-  } else {
-    alert('Actually I am pretty crazy about watermelon!  I once ate two large watermelons in one sitting...it was not the best idea but it was delicious!');
-  }
+} else {
+  alert('Actually I am pretty crazy about watermelon!  I once ate two large watermelons in one sitting...it was not the best idea but it was delicious!');
+}
 
 var home = prompt('Do I live in Seattle?');
 console.log('live in Seattle?', home);
 
-  if(home.toLowerCase() == 'no') {
-    alert('Correct!  Too expensive!');
-    scoreKeeper++;
+if(home.toLowerCase() == 'no') {
+  alert('Correct!  Too expensive!');
+  scoreKeeper++;
 
 } else{
-    alert('Nah, I actually live across the Puget Sound');
-  }
+  alert('Nah, I actually live across the Puget Sound');
+}
 
 var wine = prompt('Am I a fan of wine?');
 console.log('wine', wine);
 
- if(wine.toLowerCase() == 'yes') {
-    alert('YES!  I love wine! mmmm');
+if(wine.toLowerCase() == 'yes') {
+  alert('YES!  I love wine! mmmm');
+  scoreKeeper++;
 
-  }else {
-    alert('Actually I am a wine-o, haha');
-  }
+}else {
+  alert('Actually I am a wine-o, haha');
+}
 
 var age = prompt('Am I in my 30\'s?');
 console.log('30s', age);
 
-  if(age.toLowerCase() == 'yes') {
-    alert('yeahhh I am becoming old');
+if(age.toLowerCase() == 'yes') {
+  alert('yeahhh I am becoming old');
+  scoreKeeper++;
 
-  } else {
-    alert('awww thank you, unfortunely I am getting old');
-  }
+} else {
+  alert('awww thank you, unfortunely I am getting old');
+}
 
 
 var myVehicle = 3;
@@ -68,8 +70,9 @@ for (var attempts = 4; attempts > 0 && answer; attempts--) {
   guess = parseInt(guess);
 
   if(guess === myVehicle) {
-    alert('Correct!');
-    answer = false
+    alert('Correct! I have 1 car and 2 motorcyles');
+    answer = false;
+    scoreKeeper++;
   } else if (attempts === 1){
     alert('Sorry you are out of chances');
   } else if(guess < 3){
@@ -81,28 +84,31 @@ for (var attempts = 4; attempts > 0 && answer; attempts--) {
 
 var answer = true;
 var guess;
-var countries = ['test1','test2'];
+var countries = ['Iraq','Afghanistan','Kuwait','Pakistan','Iceland','Germany','Ireland','Netherlands','Scotland','Mexico','Canada','Kazakhstan','Korea','Japan'];
 var i;
 var secondaryCon = true;
 
 for(var attempts = 6; attempts > 0 && answer; attempts--) {
-        guess = prompt('Can you name another country I have been to?');
-        console.log('out of for loop' + attempts);
+  guess = prompt('Can you name another country I have been to?');
+  console.log('out of for loop' + attempts);
 
 
-          for( i = 0; i < countries.length && secondaryCon; i++){
-console.log('inner for loop' + i);
-              if(guess === countries[i]) {
-                  answer = false;
-                  secondaryCon = false;
-                  alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
-                  console.log('innerif ' + answer);
+  for( i = 0; i < countries.length && secondaryCon; i++){
+    console.log('inner for loop' + i);
+    if(guess === countries[i]) {
+      answer = false;
+      secondaryCon = false;
+      alert('Yes!  That\'s one of the answers, I would have also accepted: ' + countries + '.');
+      console.log('innerif ' + answer);
+      scoreKeeper++;
 
-            } else if(i === countries.length -1) {
-            alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
-            console.log('inner elseif' + i);
-
-        }
+    } else if(i === countries.length -1) {
+      alert('Unfortunely you are out of attempts.  Possible answers included: ' + countries + '.  Better luck next time!');
+      console.log('inner elseif' + i);
+      
+    } else {
+      alert('Ooo, nice try.  I actually have not been there before, but now that you mention it maybe I will take a trip!');
+    }
 
   }
 }
